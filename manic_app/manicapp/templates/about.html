@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Nail-studio</title>
+    <link rel="stylesheet" href="../static/style.css">
+    {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+  <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1 class="font-h1">Nail Studio</h1>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="{% url 'index' %}">Главная</a>
+            <a href="{% url 'service' %}">Запись</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <div class="animation start-home"></div>
+        </div>
+        <div class="main ">
+            <div class="about-us-grid">
+                <div class="studio-pic"></div>
+                <div class="studio-question">
+                    <h2 class="font-h2">Кто мы такие?</h2>
+                    <p class="text-bold">
+                        Nail Studio - салон красоты, а маникюр - наш конек!<br>
+                        Мы - дружная команда, которая любит приятно удивлять качеством услуг,
+                        а также воплощать все ваши самые смелые идеи. <br>У салона фишка: фиксированный прайс и огромное
+                        количество цветов и вариантов дизайна, среди которых точно найдется что-то, что вам по душе.
+                        Наша гордость - команда <a href="">мастеров</a>, которые рады делать ваши ногти самыми красивыми.
+                    </p>
+                </div>
+                <div class="address-pic">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed330fba2c83bb7613d75b238dbb9d404cea0e06e224ae0773cfc163408f3794&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+                </div>
+                <div class="address-question">
+                    <h2 class="font-h2">Где мы находимся?</h2>
+                    <p class="text-bold">
+                        Мы находимся по адресу Зубовский бульвар 15 строение 1, подъезд 1.
+                        <br>Метро Парк Культуры, первый выход, 200 метров налево. 
+                        <br>Работаем ежедневно, без перерывов, с 10:00 до 19:00, по праздникам тоже работаем!
+                    </p>
+                </div>
+                <div class="frequent-questions">
+                    <h2 class="font-h2">Немного о нашем маникюре:</h2>
+                    <p class="text-bold">
+                        <ul class="text-bold">
+                            <li>
+                                Качество и сертификаты
+                                <br>
+                                <br>
+
+
+                            </li>
+                            <br>
+                            <li>
+                                Что интересного мы делаем? 
+                                <br>
+                                <br>
+                                Аэрограф, втирку, кошачий глаз, стемпинг, слайдеры, блестки и 3д фигурки, рисуем вручную, наращиваем очень длинные ногти.
+                                У нас много всего разного, если сложно определиться, можно посмотреть работы в <a href="">портфолио</a>.
+                            </li>
+                            <li>
+                                У мастеров разный скилл
+                                <br>
+                                <br>
+                                И это нормально, так как навыки оттачиваются со временем. 
+                                У нас действует скидка 30%, если вы идете к мастеру, который только начинает практиковать 
+                                новые для него вещи. Мастер делает это не первый раз, но ему нужны ваши руки, чтобы лучше 
+                                закрепить навык. Так мы помогаем друг другу!
+                            </li>
+                            <br>
+                            <li>
+                                Дополнительно
+                                <br>
+                                <br>
+                                Можем предложить вам чай/кофе/печеньки, зарядить телефон, 
+                                если вы единственный клиент в салоне - включим ваш плейлист или фильм.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="any-questions">
+                    <h2 class="font-h2">Остались вопросы?</h2>
+                    <p class="text-bold">Если у вас есть вопрос, который вы бы хотели уточнить,
+                        вы можете написать нам в WhatsApp, и мы с радостью вас проконсультируем.
+                    </p>
+                    <button class="basic-btn"><p>WhatsApp</p></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+        <div id="social_sites">
+            <div>
+                tg
+            </div>
+            <div>
+                vk
+            </div>
+            <div>
+                inst
+            </div>
+        </div>
+        <div id="contacts">
+            <div>
+                <a class="font-p-solid" href="tel:+79536333505">+7(999)888-77-66</a>
+            </div> 
+            <div>
+                <a class="font-p-solid" href="mail:nailstudio@yandex.ru">nailstudio@yandex.ru</a>
+            </div> 
+        </div>
+    </div>
+  </div>
+  <form id="myForm">
+    {% csrf_token %}
+</form>
+  {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

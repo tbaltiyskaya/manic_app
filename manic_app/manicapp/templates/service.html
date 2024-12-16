@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Nail-studio</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="{{ MEDIA_URL }}images/favicon.ico">
+    {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+  <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1 class="font-h1">Nail Studio</h1>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="{% url 'index' %}">Главная</a>
+            <a href="{% url 'service' %}">Запись</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <div class="animation start-home"></div>
+        </div>
+        <div class="main">
+            <div class="service-chose">
+                <div class="main-services">
+                    <div><h2 class="font-h2">Основная услуга</h2></div>
+                    <div class="main-card" id="main_serv_add"></div>
+                </div>
+                <div class="design-services">
+                    <div><h2 class="font-h2">Дополнительные услуги</h2></div>
+                    <div class="design-card" id="add_serv_add"></div>
+                </div>
+            </div>
+            <div class="time-chose">
+                <div><h2 class="font-h2">Выберите время</h2></div>
+                <div class="select-block">
+                    <div id="date-block">
+                    </div>
+                    <div id="time-block">
+                    </div>
+                </div>
+            </div>
+            <div class="booking">
+                <button class="basic-btn" id="book-btn"><p>Записаться</p></button>
+            </div>
+        </div>
+        <div class="footer">
+        <div id="social_sites">
+            <div>
+                tg
+            </div>
+            <div>
+                vk
+            </div>
+            <div>
+                inst
+            </div>
+        </div>
+        <div id="contacts">
+            <div>
+                <a class="font-p-solid" href="tel:+79536333505">+7(999)888-77-66</a>
+            </div> 
+            <div>
+                <a class="font-p-solid" href="mail:nailstudio@yandex.ru">nailstudio@yandex.ru</a>
+            </div> 
+        </div>
+    </div>
+  </div>
+  <form id="myForm">
+    {% csrf_token %}
+    </form>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Подтвердите запись</h2>
+            <p id="form-begin"></p>
+            <p id="form-final-price"></p>
+            <p id="form-final-time"></p>
+            <p>Введите ваши контактные данные для подтверждения записи.</p>
+            <form id="contactForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" placeholder="Татьяна" required>
+                <label for="email">Почта:</label>
+                <input type="email" id="email" name="email" placeholder="qwerty@email.ru" required>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" placeholder="8-xxx-xxx-xx-xx" required>
+                <button id="submit-btn" type="submit"><p>Отправить</p></button>
+            </form>
+        </div>
+    </div>
+    <div id="success">
+        <div class="success-content">
+            <h3>Вы успешно записаны. Ждем вас!</h3>
+        </div>
+    </div>
+  {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title id="sss">Nail-studio - Для администратора</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="{{ MEDIA_URL }}images/favicon.ico">
+    {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+</head>
+  <body>
+  <div class="container">
+    <div class="header">
+        <div class="title">
+            <h1 class="font-h1">Nail Studio - администратору</h1>
+        </div>
+    </div>
+        <div class="main">
+            <div class="control-tables">
+                <div class="create-free-dates">
+                    <div class="control-header">
+                        <p class="font-p-solid">Добавить окошки на неделю вперед</p>
+                    </div>
+                    <div>
+                        <button class='basic-btn' id="btn-create-dates" disabled><p></p></button>
+                    </div>
+                </div>
+                <div class="drop-last-dates">
+                    <div class="control-header">
+                        <p class="font-p-solid">Удалить окошки за прошедшую неделю</p>
+                    </div>
+                     <button class='basic-btn' id="btn-drop-dates" disabled><p></p></button>
+                </div>
+            </div>
+            <div class="show-taken-services">
+                <div>
+                    <select id="chose-show-date">
+                    </select>
+                </div>
+                <div>
+                    <table id="DayTable">
+                        <thead>
+                              <tr>
+                              </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="social_sites">
+                <div>
+                    tg
+                </div>
+                <div>
+                    vk
+                </div>
+                <div>
+                    inst
+                </div>
+            </div>
+            <div id="contacts">
+                <div>
+                    <a class="font-p-solid" href="tel:+79536333505">+7(999)888-77-66</a>
+                </div> 
+                <div>
+                    <a class="font-p-solid" href="mail:nailstudio@yandex.ru">nailstudio@yandex.ru</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+  <form id="myForm">
+    {% csrf_token %}
+</form>
+  {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+    <script src="{% static 'admin_script.js' %}"></script>
+  </body>
+</html>

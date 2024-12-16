@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Nail-studio - Вход</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="{{ MEDIA_URL }}images/favicon.ico">
+    {% load static %}
+    <script>var redirectUrl = "{% url 'for_admin' %}";</script>
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+  <body>
+    <div class="main-login">
+        <div class="wrapper">
+            <div id="sign_in">
+             <form id="sign_in_form">
+                <p>Логин</p>
+                 <input type="text" id="text" name="text">
+                 <p>Пароль</p>
+                 <input type="password" id="password" name="password">
+                 <button type="submit" class="basic-btn" id="sign_in_btn"><p>Войти</p></button>
+             </form>
+            </div>
+        </div>
+    </div>
+  <form id="myForm">
+    {% csrf_token %}
+</form>
+
+  {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+    <script src="{% static 'login_script.js' %}"></script>
+  </body>
+</html>

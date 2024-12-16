@@ -1,0 +1,123 @@
+
+.control-tables{
+   display: flex;
+   flex-direction: row;
+   width: 700px;
+   justify-content: center;
+   align-items: center;
+}
+.control-tables h2{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.create-free-dates, .drop-last-dates{
+   width: 300px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.control-header{
+    height: 100px;
+}
+.create-free-dates div, .drop-last-dates div{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.create-free-dates .control-header, .drop-last-dates .control-header{
+    width: 300px;
+    height: 50px;
+} 
+.show-taken-services{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#chose-show-date{
+    width: 200px;
+    height: 40px;
+    display: flex;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+thead th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(1) {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#DayTable tbody td:nth-child(1) {
+    min-width: 50px;
+}
+
+#DayTable tbody td:nth-child(2) {
+    min-width: 150px;
+}
+
+#DayTable tbody td:nth-child(n+3) {
+    max-width: 40px;
+}
+
+td {
+    padding: 8px;
+    max-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    font-size: 14px;
+}
+.portfolio-manage{
+    width: 800px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+
+}
+.upload-photo{
+    margin: 5px;
+    width: 400px;
+    height: 300px;
+}
+#textfield{
+    width: 300px;
+    height: 70px;
+}

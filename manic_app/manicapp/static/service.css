@@ -1,0 +1,129 @@
+.main-card, .design-card{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.type-card, .add-card{
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.type-card{
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30% 45% 25%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "service-name service-name service-name"
+      "service-desc service-desc service-desc"
+      "service-price service-time select-btn";
+
+}
+.type-card div, .add-card div{
+    display: flex;
+    justify-content: center; align-items: center;
+    text-align: center;
+}
+
+.service-name {grid-area: service-name; margin-top: 10px;}
+
+.service-desc {grid-area: service-desc; margin: 2px;}
+
+.service-price {grid-area: service-price;}
+
+.service-time {grid-area: service-time;}
+
+.select-btn {grid-area: select-btn;}
+
+.name{color: white; font-size: 20px; font-weight: 400;}
+.desc{color: white;; font-size: 16px; font-weight: 300; font-style: italic;}
+.price, .time{color: white;; font-size: 18px; font-weight: 300;}
+
+.add-service{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.add-card{
+    width: 210px;
+    height: 260px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 40% 20% 20%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "service-name service-name"
+      "service-desc service-desc"
+      "service-price service-time"
+      "select-btn select-btn";
+}
+
+.time-chose{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 20px;
+}
+.select-block{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: start;
+}
+.select-block > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+#date-block > div, #time-block > div{
+    margin: 5px;
+}
+#date-block{
+    width: 600px;
+    margin: 20px;
+}
+#time-block{
+    width: 500px;
+    margin: 20px;
+}
+.time-card, .date-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.date-card{
+    width: 130px;
+    height: 40px;
+}
+.time-card{
+    width: 50px;
+    height: 50px;
+}
+.time-card p, .date-card p{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+}

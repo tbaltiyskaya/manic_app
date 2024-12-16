@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Nail-studio</title>
+     <link rel="stylesheet" href="../static/style.css">
+    {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+  <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1 class="font-h1">Nail Studio</h1>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="{% url 'index' %}">Главная</a>
+            <a href="{% url 'service' %}">Запись</a>
+            <a href="{% url 'about' %}">О нас</a>
+            <div class="animation start-home"></div>
+        </div>
+        <div class="main">
+            <div class="main-decs">
+                <div class="main-picture">
+                <img src="{{ MEDIA_URL }}images/manic_main.png">
+                </div>
+                <div class="title-description">
+                <h2 class="font-h2">
+                  Маникюр мечты? Легко!<br>
+                  Выберите подходящий вариант, узнайте точную цену, запишитесь на удобное время.<br>
+                  А мы сделаем все, чтобы подружки просили контакты мастера, а парень точно заметил ваши ноготочки!
+                </h2>
+                </div>
+            </div>
+            <div class="invitation-block">
+                <div class="invite-text">
+                    <p class="text-bold">
+                        Записаться к нам можно любым удобным способом, 
+                        через наш сайт, или по whatsapp! Запишитесь онлайн или позвоните администратору.
+                    </p>
+                </div>
+                <div class="invite-buttons">
+                    <div>
+                        <button class="basic-btn"><p>WhatsApp</p></button>
+                    </div>
+                    <div>
+                        <a href="{% url 'service' %}"><button class="basic-btn"><p>Онлайн</p></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="price-block"></div>
+      </div>
+      <div class="footer">
+        <div id="social_sites">
+            <div>
+                tg
+            </div>
+            <div>
+                vk
+            </div>
+            <div>
+                inst
+            </div>
+        </div>
+        <div id="contacts">
+            <div>
+                <a class="font-p-solid" href="tel:+79536333505">+7(999)888-77-66</a>
+            </div> 
+            <div>
+                <a class="font-p-solid" href="mail:nailstudio@yandex.ru">nailstudio@yandex.ru</a>
+            </div> 
+            <div class="icon-sign">
+                <a class="font-p-solid" href="{% url 'login' %}">Для администратора</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <form id="myForm">
+    {% csrf_token %}
+</form>
+  {% load static %}
+    <script src="{% static 'jquery-3.7.1.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

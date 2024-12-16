@@ -1,0 +1,67 @@
+@import 'nav-footer.css';
+@import 'main.css';
+@import 'about.css';
+@import 'portfolio.css';
+@import 'about.css';
+@import 'login.css';
+@import 'service.css';
+@import 'admin.css';
+@import 'style-base.css';
+
+body{
+    font-family: "Unbounded", sans-serif;
+    margin: 0;
+    background: rgb(135,17,218);
+    background: linear-gradient(90deg, rgba(135,17,218,1) 40%, rgba(20,23,209,1) 100%);
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;  
+}
+
+.basic-btn{
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    min-width: 180px;
+    min-height: 50px;
+    max-width: 250px;
+    max-height: 100px;
+    border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0 0 8px #ffffff;
+    background-color: rgba(255,255,255,0.1);
+    transition: all .3s;
+}
+.basic-btn p{
+    text-align: center;
+    font-family: "Unbounded", sans-serif;
+    color: #ffffff;
+    font-weight: 400;
+    text-shadow: rgba(255,255,255,0.9) 0px 0px 15px;
+}
+
+.basic-btn:hover{
+    transform: scale(1.05);
+}
+.basic-btn:active{
+    transform: scale(0.95);
+}
+.basic-btn:disabled{
+    transition: none;
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.4;
+
+}

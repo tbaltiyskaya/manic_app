@@ -1,0 +1,136 @@
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.icon-sign{
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+}
+
+.nav{
+    width: 100%;
+    height: 60px;
+}
+.nav {
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 590px;
+	height: 50px;
+	border-radius: 8px;
+	font-size: 0;
+}
+.nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 12px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+.nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+a:nth-child(1) {
+	width: 100px;
+}
+a:nth-child(2) {
+	width: 110px;
+}
+a:nth-child(3) {
+	width: 100px;
+}
+a:nth-child(4) {
+	width: 160px;
+}
+.nav .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0;
+	background-color: rgba(255,255,255,0.1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.nav .start-about, a:nth-child(2):hover~.animation {
+	width: 110px;
+	left: 100px;
+	background-color: rgba(255,255,255,0.1);
+}
+.nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 210px;
+	background-color: rgba(255,255,255,0.1);
+}
+.nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 160px;
+	left: 310px;
+	background-color: rgba(255,255,255,0.1);
+}
+.footer{
+    width: 100%;
+    display: flex;
+    height: 250px;
+    margin-top: 100px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 900px){
+    .footer{
+        flex-direction: column;
+    }
+}
+
+#social_sites{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+}
+#social_sites div{
+    width: 70px;
+    height: 70px;
+    border: 1px solid white;
+}
+#contacts{
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: center;
+}
+#contacts div{
+    height: 50px;
+}
+
+#contacts div a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.font-h1{font-size: 50px; font-weight: 500; color: aliceblue; 
+    text-shadow: 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+}
+.font-h2{color: white; font-weight: 400; font-size: 24px; text-align: center;}
+
+.text-bold{color: white; font-weight: 300; font-size: 18px;text-align: center;}
